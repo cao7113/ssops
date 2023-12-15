@@ -1,4 +1,4 @@
-# ln -s /path/to/this/file ~/.bash_aliases
+# ln -s ~/ssops/bash/dot.bash_aliases ~/.bash_aliases
 
 ## base
 alias lvi="vi ~/.bash_aliases && source ~/.bash_aliases"
