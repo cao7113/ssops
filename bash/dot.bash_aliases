@@ -13,7 +13,9 @@ alias grv="git remote -v"
 alias gbr="git branch"
 alias ports="sudo netstat -lnput"
 alias path="echo export PATH=$PATH"
-alias root="sudo su" 
+alias root="sudo su"
+alias up="cd .."
+alias up2="cd ../.."
 
 # nodejs
 alias m2="pm2"

@@ -3,9 +3,18 @@ version: "3"
 tasks:
   hi: echo ssops
 
+  install-tools:
+    cmds:
+      - |
+        sudo apt install jq
+
   ## asdf https://asdf-vm.com/guide/getting-started.html
   asdf-dep: apt install curl git
-  asdf-clone: git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+  asdf-clone:
+    cmds:
+      - |
+        git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+        cd ~/.asdf && git switch -c bv0.13.1
   asdf-conf:
     cmds:
       - |
