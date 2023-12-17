@@ -28,3 +28,4 @@ function db(){
 }
 
 [ -f ~/.local_aliases ] && source ~/.local_aliases
+alias lalias="vi ~/.local_aliases && source ~/.local_aliases"

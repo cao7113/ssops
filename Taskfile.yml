@@ -6,7 +6,9 @@ tasks:
   install-tools:
     cmds:
       - |
-        sudo apt install jq
+        sudo apt install jq tree
+        # netstat
+        sudo apt install net-tools
 
   ## asdf https://asdf-vm.com/guide/getting-started.html
   asdf-dep: apt install curl git
