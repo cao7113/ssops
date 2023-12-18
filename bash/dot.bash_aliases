@@ -18,6 +18,8 @@ alias root="sudo su"
 alias up="cd .."
 alias up2="cd ../.."
 alias tk="task"
+alias tkl="task --list-all"
+alias tkc="cat Taskfile.yml"
 
 # nodejs
 alias m2="pm2"
