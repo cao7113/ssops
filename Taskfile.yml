@@ -10,6 +10,11 @@ tasks:
         # netstat
         sudo apt install net-tools
 
+  install-docker:
+    cmds:
+      - |
+        sudo apt  install docker.io  # version 24.0.5-0ubuntu1~20.04.1
+
   ## asdf https://asdf-vm.com/guide/getting-started.html
   asdf-dep: apt install curl git
   asdf-clone:
@@ -26,12 +31,20 @@ tasks:
         . "$HOME/.asdf/completions/asdf.bash"
         Doc
   ## asdf plugins
+  setup-nodejs:
+    deps:
+      - asdf-nodejs-dep
+      - sdf-nodejs
+      - ls-node
+
   asdf-nodejs-dep:
     cmds:
       - |
         apt-get install dirmngr gpg curl gawk
-  asdf-nodejs: asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  asdf-nodejs:
+    cmds:
+      - |
+        asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
   ls-node: asdf list all nodejs
-
   ## setup
   ln-aliases: ln -s ~/ssops/bash/dot.bash_aliases ~/.bash_aliases
