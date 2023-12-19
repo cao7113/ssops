@@ -34,17 +34,18 @@ tasks:
   setup-nodejs:
     deps:
       - asdf-nodejs-dep
-      - sdf-nodejs
+      - asdf-add-nodejs
       - ls-node
 
   asdf-nodejs-dep:
     cmds:
       - |
         apt-get install dirmngr gpg curl gawk
-  asdf-nodejs:
+  asdf-add-nodejs:
     cmds:
       - |
         asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
   ls-node: asdf list all nodejs
   ## setup
   ln-aliases: ln -s ~/ssops/bash/dot.bash_aliases ~/.bash_aliases
