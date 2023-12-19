@@ -20,6 +20,7 @@ alias up2="cd ../.."
 alias tk="task"
 alias tkl="task --list-all"
 alias tkc="cat Taskfile.yml"
+alias af="asdf"
 
 # nodejs
 alias m2="pm2"
