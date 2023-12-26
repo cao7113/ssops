@@ -30,5 +30,10 @@ function db(){
   [ -f .env ] && psql $(grep '^DATABASE_URL=' .env | cut -d'=' -f2 | cut -d'?' -f1) || echo "no .env file"
 }
 
+function localip(){
+  iname=${1:-ens5}
+  ifconfig $iname | awk '/inet / {print $2}'
+}
+
 [ -f ~/.local_aliases ] && source ~/.local_aliases
 alias lalias="vi ~/.local_aliases && source ~/.local_aliases"

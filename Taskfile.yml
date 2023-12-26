@@ -46,6 +46,12 @@ tasks:
       - |
         asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
+  install-pm2: npm install pm2 -g
+  install-yarn: npm install --global yarn
+
+  # psql
+  install-psql: sudo apt install -y postgresql-client
+
   ls-node: asdf list all nodejs
   ## setup
   ln-aliases: ln -s ~/ssops/bash/dot.bash_aliases ~/.bash_aliases
