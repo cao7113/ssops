@@ -35,5 +35,10 @@ function localip(){
   ifconfig $iname | awk '/inet / {print $2}'
 }
 
+function penv(){
+  pid=${1:-1}
+  cat /proc/$pid/environ  | tr '\0' '\n' | sort
+}
+
 [ -f ~/.local_aliases ] && source ~/.local_aliases
 alias lalias="vi ~/.local_aliases && source ~/.local_aliases"
